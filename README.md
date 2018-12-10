@@ -6,7 +6,7 @@ A Linux development environment for TI's Tiva devices, distilled from [Christian
 ### Install the necessary software
 You will need to install ARM's GNU Embedded Toolchain, OpenOCD, and LM4Flash. The toolchain allows us to compile and link our embedded C code. OpenOCD--which stands for Open On-Chip Debugger--enables us to use the JTAG debugger on the Tiva board to flash the chip. And finally, LM4flash carries out the flashing operation.
 
-[...] indicates that you should replace the contents with your own values.
+**NOTE**: [...] indicates that you should replace the contents with your own values.
 
 #### ARM's GNU Embedded Toolchain
 1. Go to [ARM's webpage](https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads) to download the embedded toolchain.
