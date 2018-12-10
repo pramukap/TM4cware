@@ -21,7 +21,7 @@ You will need to install ARM's GNU Embedded Toolchain, OpenOCD, and LM4Flash. Th
 
 	`export $PATH=[path-to-toolchain-directory/bin]:$PATH`
 
-Alternatively, you can place this line in your '~/.bashrc' and then call `source ~/.bashrc`.
+Alternatively, you can place this line in your `~/.bashrc` and then call `source ~/.bashrc`.
 
 5. Check that the PATH variable was succesfully updated by calling `arm-none-eabi-gcc --version`. If version information about ARM's cross-compiler is printed, then you were successful.
 
