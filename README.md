@@ -50,24 +50,26 @@ Alternatively, you can place this line in your `~/.bashrc` and then call `source
 2. Navigate into the `openocd.git`, and build the software by executing:
 
 ```
-	./bootstrap
-	./configure --prefix=/usr --enable-maintainer-mode --enable-stlink --enable-ti-icdi
-	make
-	sudo make install
+./bootstrap
+./configure --prefix=/usr --enable-maintainer-mode --enable-stlink --enable-ti-icdi
+make
+sudo make install
 ```
 
 ### Operating the Development Enviroment
 To use the development enviroment:
 
-1. Place your C code in the proj directory
+**One-and-Done Step:** Build all the driver software by going to the root directory `TM4Cware` and executing `make`
+
+1. Place your C code in the `proj` directory
 
 2. Open the `Makefile` and update the MAIN variable with the name of your main C file.
 
 3. Finally to build and flash, execute:
 
 ```
-	make clean
-	make
-	make flash
+make clean
+make
+make flash
 ```
 
