@@ -73,3 +73,22 @@ make
 make flash
 ```
 
+## Adding Custom Drivers to your Project
+The easiest way to add drivers new drivers to your project is as follows:
+
+1. Copy your C file and corresponding header file into the `driverlib` directory found in the root directory of your project.
+
+2. Open `driverlib/Makefile`, and navigate to the part of the file titled "Rules for building the driver library".
+
+3. Copy one of the existing rules, and paste it at the end of the long list. Modify this pasted rule by renaming the .o file with the name of your driver. For example, if my driver files were named UART.c and UART.h, I would modify that line by changing `${COMPILER}/[some other driver].o` to `${COMPILER}/UART.o`.
+
+4. Navigate to your root directory.
+
+5. From there you can build your drivers by executing:
+
+```
+make clean
+make
+make flash
+```
+6. Now you can compile your project code with your drivers. Keep in mind that you must reference the header file in your code using `#include "driverlib/[driver].h"`.
