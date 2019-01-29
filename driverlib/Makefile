@@ -105,6 +105,7 @@ ${COMPILER}/libdriver.a: ${COMPILER}/uart.o
 ${COMPILER}/libdriver.a: ${COMPILER}/udma.o
 ${COMPILER}/libdriver.a: ${COMPILER}/usb.o
 ${COMPILER}/libdriver.a: ${COMPILER}/watchdog.o
+${COMPILER}/libdriver.a: ${COMPILER}/pll.o
 
 #
 # Include the automatically generated dependency files.

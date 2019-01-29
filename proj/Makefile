@@ -95,6 +95,11 @@ ENTRY_${MAIN}=ResetISR
 CFLAGSgcc=-DTARGET_IS_TM4C123_RB1
 
 #
+# Rules for building custom drivers.
+# ${COMPILER}/${MAIN}.axf: ${COMPILER}/[replace this with name of driver].o
+#
+
+#
 # Include the automatically generated dependency files.
 #
 ifneq (${MAKECMDGOALS},clean)

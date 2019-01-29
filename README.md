@@ -74,7 +74,28 @@ make flash
 ```
 
 ## Adding Custom Drivers to your Project
+
+### Adding drivers in the `proj` Directory:
 The easiest way to add drivers new drivers to your project is as follows:
+
+1. Copy your C file and corresponding header file into the `proj` directory found in the root directory of your project.
+
+2. Open the `proj/Makefile`, and navigate to the part of the file titled "Rules for building custom drivers".
+
+3. Copy the example rule and paste it under this header.
+
+4. Change the .o filename to your driver's filename.
+
+5. Execute the following to build and flash your code (make sure you `#include` your driver code in your source code):
+
+```
+make clean
+make
+make flash
+```
+
+### Adding drivers in the `driverlib` Directory:
+For more permanent drivers:
 
 1. Copy your C file and corresponding header file into the `driverlib` directory found in the root directory of your project.
 
