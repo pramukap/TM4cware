@@ -1,0 +1,18 @@
+# ignore certain directories and files present in all labs
+*/boot_loader/
+*/driverlib/
+*/drivers/
+*/inc/
+*/usblib/
+*/utils/
+*/settings.ini
+*/proj/gcc
+*/Makefile
+*/makedefs
+
+
+# ignore .o and .d files
+*.o
+*.d
+*.bin
+*.axf

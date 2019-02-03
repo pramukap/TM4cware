@@ -65,6 +65,9 @@ MAIN=main
 all: ${COMPILER}
 all: ${COMPILER}/${MAIN}.axf
 
+debug: CFLAGSgcc+=DEBUG
+debug: all
+
 #
 # The rule to flash the program to the chip.
 #
