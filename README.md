@@ -113,3 +113,19 @@ make
 make flash
 ```
 6. Now you can compile your project code with your drivers. Keep in mind that you must reference the header file in your code using `#include "driverlib/[driver].h"`.
+
+## Adding Interrupt Handlers to your Project
+If want to use hardware interrupts in your project, you will have to write interrupt handlers. Once you have written the handler, you must integrate it into the existing project code:
+
+1. Open `proj/startup_gcc.c` and navigate to the section titled "Forward declaration of the custom interrupt handlers."
+
+2. In this section, add your handler prototype.
+
+3. Then navigate to the end of the file. Here you will find the default interrupt handler functions which act as placeholders for unimplemented interrupt handlers. For debugging purposes, these functions contain an empty `while (1)` loop.
+
+4. Copy and paste one of the default handler functions you see there and replace the function name with that of your handler.
+
+## Debugging and Troubleshooting Tips
+1. If you get an "Undefined reference to" compilation error after adding a new driver, it's most likely because you haven't added a Makefile target to compile that driver.
+
+2. If you see your code contains interrupts, and during runtime you can tell it has ceased typical operation, it's potentially stuck in a do-nothing loop of a default interrupt handler.
