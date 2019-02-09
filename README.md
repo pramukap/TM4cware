@@ -125,6 +125,12 @@ If want to use hardware interrupts in your project, you will have to write inter
 
 4. Copy and paste one of the default handler functions you see there and replace the function name with that of your handler.
 
+5. Finally, navigate to the section titled `vector table`.
+
+6. Inside this section, find the entry for the hardware that you're using to trigger interrupts.
+
+7. Overwrite the existing entry with the name of your interrupt handler. Adding your interrupt handler to this table is important because it is part of how the processor automagically navigates to the handler when the interrupt is received.
+
 ## Debugging and Troubleshooting Tips
 1. If you get an "Undefined reference to" compilation error after adding a new driver, it's most likely because you haven't added a Makefile target to compile that driver.
 
