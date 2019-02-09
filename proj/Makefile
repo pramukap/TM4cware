@@ -65,8 +65,19 @@ MAIN=main
 all: ${COMPILER}
 all: ${COMPILER}/${MAIN}.axf
 
-debug: CFLAGSgcc+=DEBUG
+#
+# Enable debug code at compile-time
+#
+debug: CFLAGSgcc+=-DDEBUG
+debug: CFLAGSgcc+=-g
 debug: all
+
+#
+# Enable gdb debugging
+# 
+gdb: debug
+	openocd --file /usr/share/openocd/scripts/board/ek-tm4c123gxl.cfg &
+	arm-none-eabi-gdb -tui -command=init.gdb gcc/${MAIN}.axf
 
 #
 # The rule to flash the program to the chip.
